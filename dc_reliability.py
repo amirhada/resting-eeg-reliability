@@ -11,12 +11,11 @@ import pandas as pd
 import datachain as dc
 from datachain import C, File, DataModel
 
-import reliability_core as rc
-
+BASE_DIR = Path(__file__).resolve().parent
 
 # Paths to repo-local inputs (these live in the GitHub repo)
-MIDS_EXCEL_PATH = Path("mids-list.xlsx")
-GEOM_PATH = Path("your_headset_geometry.json")
+MIDS_EXCEL_PATH = BASE_DIR / "mids-list.xlsx"
+GEOM_PATH = BASE_DIR / "your_headset_geometry.json"
 
 # DataChain dataset names – adapt if your canonical names differ
 CANONICAL_EEG_DATASET = os.environ.get(
